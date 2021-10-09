@@ -48,17 +48,6 @@ indent_size = 2
 [*.md]
 trim_trailing_whitespace = false
 
-# Web Files
-[*.{htm,html,js,jsm,ts,tsx,css,sass,scss,less,pcss,svg,vue}]
-indent_size = 2
-
-# Batch Files
-[*.{cmd,bat}]
-end_of_line = crlf
-
-# Bash Files
-[*.sh]
-end_of_line = lf
 
 # Makefiles
 [Makefile]
@@ -116,8 +105,8 @@ dotnet_style_prefer_simplified_boolean_expressions = true:warning
 dotnet_style_coalesce_expression = true:warning
 dotnet_style_null_propagation = true:warning
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
+dotnet_style_namespace_match_folder = false
 
-dotnet_style_operator_placement_when_wrapping = end_of_line:warning
 csharp_style_prefer_null_check_over_type_check = true:warning
 dotnet_diagnostic.IDE0130.severity = suggestion
 
@@ -404,3 +393,5 @@ dotnet_naming_symbols.parameters_group.applicable_kinds = parameter
 dotnet_naming_rule.parameters_rule.symbols              = parameters_group
 dotnet_naming_rule.parameters_rule.style                = camel_case_style
 dotnet_naming_rule.parameters_rule.severity             = warning
+
+dotnet_diagnostic.IDE0130.severity = none
