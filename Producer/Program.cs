@@ -24,7 +24,7 @@ namespace Producer
                 cfg.Publish<Message>(x => x.ExchangeType = ExchangeType.Direct);
             });
 
-            await busControl.StartAsync(source.Token);
+            _ = await busControl.StartAsync(source.Token);
 
             try
             {
