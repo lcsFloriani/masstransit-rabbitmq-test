@@ -1,4 +1,4 @@
-﻿using BuildingBlocks;
+using BuildingBlocks;
 
 using MassTransit;
 

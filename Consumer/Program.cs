@@ -1,4 +1,4 @@
-﻿using BuildingBlocks;
+using BuildingBlocks;
 
 using MassTransit;
 
@@ -37,13 +37,13 @@ namespace Consumer
 
             CancellationTokenSource source = new(TimeSpan.FromSeconds(10));
 
-            await busControl.StartAsync(source.Token);
+            _ = await busControl.StartAsync(source.Token);
 
             try
             {
                 Console.WriteLine("Press enter to exit");
 
-                await Task.Run(() => Console.ReadLine());
+                _ = await Task.Run(() => Console.ReadLine());
             }
             finally
             {
